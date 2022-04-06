@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\crest\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\crest\\.nuget\\packages"
+    ]
+  }
+}
