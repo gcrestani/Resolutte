@@ -11,7 +11,8 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchUrl": "Audios",
+      "launchBrowser": true,
+      "launchUrl": "api/audios",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

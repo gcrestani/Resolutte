@@ -30,7 +30,7 @@ namespace ResolutteAudioAPI
             services.AddControllers();
 
             services.AddDbContext<ResolutteAudioAPIContext>(options =>
-                    options.UseMySql(Configuration.GetConnectionString("ResolutteAudioAPIContext")));
+                    options.UseMySql(Configuration.GetConnectionString("ResolutteAudioAPIContext"), builder => builder.MigrationsAssembly("ResolutteAudioAPI")));
 
             services.AddScoped<SeedingService>();
 
