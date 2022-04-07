@@ -1,0 +1,38 @@
+<div>
+  <h2>Adicionar áudio</h2>
+  <div>
+    <label
+      >Nome do arquivo:
+      <input
+        [(ngModel)]="audioData.ArquivoNome"
+        placeholder="nome_do_arquivo.mp3"
+      /> </label
+    ><br />
+    <label
+      >Tipo de ligação:
+      <select
+        [(ngModel)]="audioData.TipoLigacao"
+        name="tipoLigacao"
+        id="tipoLigacao"
+      >
+        <option value="0">Entrada</option>
+        <option value="1">Saída</option>
+      </select>
+    </label>
+    <label
+      >Nome do operador:
+      <input
+        [(ngModel)]="audioData.OperadorNome"
+        placeholder="Jõao Silva"
+      /> </label
+    ><br />
+    <label
+      >Data da Criação:
+      <input
+        type="datetime-local"
+        [(ngModel)]="audioData.DataCriacao"
+      /> </label
+    ><br />
+  </div>
+  <button (click)="addAudio()">Save</button>
+</div>

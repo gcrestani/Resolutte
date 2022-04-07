@@ -32,7 +32,7 @@ namespace ResolutteAudioAPI.Data
             Audio a7 = new Audio(7, "recupercação da chamada 4124.mp3", TipoLigacao.Saida, "Mario Salgado",new DateTime(2020, 10, 30, 10, 18, 55));
             Audio a8 = new Audio(8, "elogio_atendente_Maria", TipoLigacao.Entrada, "Marta Marrafão",new DateTime(2022, 12, 25, 09, 44, 59));
             Audio a9 = new Audio(9, "audio_20200305.mp3", TipoLigacao.Entrada, "Gustavo Marcos Rocha",new DateTime(2020, 03, 05, 11, 55, 42));
-            Audio a10 = new Audio(101, "audio_321.mp3", TipoLigacao.Entrada, "Joao da Silva",new DateTime(2022, 10, 10, 13, 28, 34));
+            Audio a10 = new Audio(10, "audio_321.mp3", TipoLigacao.Entrada, "Joao da Silva",new DateTime(2022, 10, 10, 13, 28, 34));
 
             _context.Audio.AddRange(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
 

@@ -33,6 +33,16 @@ namespace ResolutteAudioAPI
                     options.UseMySql(Configuration.GetConnectionString("ResolutteAudioAPIContext")));
 
             services.AddScoped<SeedingService>();
+
+            services.AddCors(options =>
+             {
+                 options.AddDefaultPolicy(
+                     policy =>
+                     {
+                         policy.WithOrigins("http://localhost:4200",
+                                             "localhost:4200");
+                     });
+             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +53,8 @@ namespace ResolutteAudioAPI
                 app.UseDeveloperExceptionPage();
                 seedingService.Seed();
             }
+
+            app.UseCors();
 
             app.UseHttpsRedirection();
 

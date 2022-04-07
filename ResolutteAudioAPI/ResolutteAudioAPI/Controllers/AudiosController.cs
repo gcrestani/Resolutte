@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -82,7 +83,7 @@ namespace ResolutteAudioAPI.Controllers
             return CreatedAtAction("GetAudio", new { id = audio.Id }, audio);
         }
 
-        // DELETE: api/Audios/5
+        // DELETE: api/Audios/5        
         [HttpDelete("{id}")]
         public async Task<ActionResult<Audio>> DeleteAudio(int id)
         {

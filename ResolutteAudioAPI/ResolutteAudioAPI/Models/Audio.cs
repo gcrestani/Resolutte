@@ -25,7 +25,15 @@ namespace ResolutteAudioAPI.Models
             ArquivoNome = arquivoNome;
             TipoLigacao = tipoLigacao;
             OperadorNome = operadorNome;
-            DataCriacao = dataCriacao;
+            try
+            {
+                DataCriacao = dataCriacao;
+
+            }
+            catch (Exception)
+            {
+                DataCriacao = DateTime.Parse(dataCriacao.ToString());
+            }
         }
     }
 }
