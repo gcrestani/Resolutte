@@ -1,38 +1,52 @@
-<div>
+<div class="form-size">
   <h2>Adicionar áudio</h2>
   <div>
-    <label
-      >Nome do arquivo:
+    <div class="form-group">
+      <label for="nomeArquivo">Nome do arquivo</label>
       <input
+        type="text"
         [(ngModel)]="audioData.ArquivoNome"
+        class="form-control form-control-sm"
+        id="nomeArquivo"
         placeholder="nome_do_arquivo.mp3"
-      /> </label
-    ><br />
+      />
+    </div>
+
     <label
       >Tipo de ligação:
       <select
+        class="form-control form-control"
         [(ngModel)]="audioData.TipoLigacao"
         name="tipoLigacao"
         id="tipoLigacao"
       >
-        <option value=0>Entrada</option>
-        <option value=1>Saída</option>
+        <option value="0">Entrada</option>
+        <option value="1">Saída</option>
       </select>
     </label>
-    <label
-      >Nome do operador:
+
+    <div class="form-group">
+      <label for="nomeOperador">Nome do operador</label>
       <input
         [(ngModel)]="audioData.OperadorNome"
-        placeholder="Jõao Silva"
-      /> </label
-    ><br />
-    <label
-      >Data da Criação:
+        type="text"
+        class="form-control form-control-sm"
+        id="nomeOperador"
+        placeholder="João Silva.mp3"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="dataCriacao">Data da criação</label>
       <input
         type="datetime-local"
         [(ngModel)]="audioData.DataCriacao"
-      /> </label
-    ><br />
+        class="form-control form-control-sm"
+        id="dataCriacao"
+      />
+    </div>
   </div>
-  <button (click)="addAudio()">Save</button>
+  <a href="/" class="btn btn-danger">Voltar</a> &nbsp;
+
+  <button class="btn btn-success" (click)="addAudio()">Salvar</button>
 </div>

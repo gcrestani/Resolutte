@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+.form-size{
+  max-width: 80%;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.form-size  input, select {
+  width: 350px !important;
+}
+
+.panel{
+  max-width: 50%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}

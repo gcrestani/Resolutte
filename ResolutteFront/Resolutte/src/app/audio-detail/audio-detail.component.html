@@ -1,14 +1,29 @@
-<div *ngIf="audio" class="audios">
-  <h2>Detalhes do Áudio:</h2>
-  <div><span>Nome: </span>{{ audio.arquivoNome }}</div>
-  <div><span>Operador: </span>{{ audio.operadorNome }}</div>
-  <div>
-    <span>Tipo de ligação: </span
-    ><span *ngIf="audio.tipoLigacao == 0">Entrada</span>
-    <span *ngIf="audio.tipoLigacao == 1">Saída</span>
-  </div>
-  <div><span>Data de criação: </span>{{ audio.dataCriacao | date }}</div>
-  <div>
-    <button routerLink="/audio-edit/{{ audio.id }}">Edit</button>
+<div class="form-size">
+  <div *ngIf="audio" class="audios panel">
+    <div class="panel-heading">
+      <h2 class="panel-title">Detalhes do Áudio:</h2>
+    </div>
+    <div>
+      <span><b>Nome:&nbsp;</b> </span>{{ audio.arquivoNome }}
+    </div>
+    <div>
+      <span><b>Operador:&nbsp;</b> </span>{{ audio.operadorNome }}
+    </div>
+    <div>
+      <span><b>Tipo de ligação:&nbsp;</b> </span
+      ><span *ngIf="audio.tipoLigacao == 0">Entrada</span>
+      <span *ngIf="audio.tipoLigacao == 1">Saída</span>
+    </div>
+    <div>
+      <span><b>Data de criação:&nbsp;</b> </span>{{ audio.dataCriacao | date }}
+    </div>
+    <div>
+      <br />
+      <a href="/" class="btn btn-danger">Voltar</a> &nbsp;
+
+      <button class="btn btn-success" routerLink="/audio-edit/{{ audio.id }}">
+        Edit
+      </button>
+    </div>
   </div>
 </div>

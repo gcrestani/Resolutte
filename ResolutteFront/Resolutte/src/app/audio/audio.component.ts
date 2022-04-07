@@ -47,6 +47,15 @@ export class AudioComponent implements OnInit {
   }
 
 
+  Detalhes(id: string): void {
+    this.router.navigate(['/audio-details/' + id]);
+
+  }
+  Editar(id: string): void {
+    this.router.navigate(['/audio-edit/' + id]);
+  }
+
+
 
   ConfirmarDelete(id: string) {
     Swal.fire({

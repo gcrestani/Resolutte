@@ -1,47 +1,47 @@
-<h2>Áudios</h2>
-
 <h3 *ngIf="this.audios.length == 0">Não foram encontrados registros.</h3>
-<table
-  *ngIf="this.audios.length > 0"
-  datatable
-  [dtOptions]="dtOptions"
-  class="row-border hover"
->
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Nome do arquivo</th>
-      <th>Tipo de ligação</th>
-      <th>Nome do operador</th>
-      <th>Data da Criação</th>
-      <th>Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let a of audios; let i = index">
-      <td>{{ a.id }}</td>
-      <td>{{ a.arquivoNome }}</td>
-      <td *ngIf="a.tipoLigacao == 0">Entrada</td>
-      <td *ngIf="a.tipoLigacao == 1">Saída</td>
-      <td>{{ a.operadorNome }}</td>
-      <td>{{ a.dataCriacao | date: "dd/MM/yyyy HH:mm" }}</td>
-      <td>
-        <button class="acao" title="Ver detalhes">👁</button>
-        &nbsp;
-        <button class="acao" title="Editar áudio">📝</button>
-        &nbsp;
-        <button
-          class="acao"
-          title="Deletar áudio"
-          (click)="ConfirmarDelete(a.id)"
-        >
-          ✖
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div>
-  <button class="right" (click)="add()">Adicionar</button>
+<div class="margin">
+  <table
+    *ngIf="this.audios.length > 0"
+    datatable
+    [dtOptions]="dtOptions"
+    class="row-border hover"
+  >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome do arquivo</th>
+        <th>Tipo de ligação</th>
+        <th>Nome do operador</th>
+        <th>Data da Criação</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of audios; let i = index">
+        <td>{{ a.id }}</td>
+        <td>{{ a.arquivoNome }}</td>
+        <td *ngIf="a.tipoLigacao == 0">Entrada</td>
+        <td *ngIf="a.tipoLigacao == 1">Saída</td>
+        <td>{{ a.operadorNome }}</td>
+        <td>{{ a.dataCriacao | date: "dd/MM/yyyy HH:mm" }}</td>
+        <td>
+          <button class="acao" title="Ver detalhes" (click)="Detalhes(a.id)">
+            👁
+          </button>
+          &nbsp;
+          <button class="acao" title="Editar áudio" (click)="Editar(a.id)">
+            📝
+          </button>
+          &nbsp;
+          <button
+            class="acao"
+            title="Deletar áudio"
+            (click)="ConfirmarDelete(a.id)"
+          >
+            ✖
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
