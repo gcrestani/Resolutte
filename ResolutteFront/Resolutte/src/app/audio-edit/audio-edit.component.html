@@ -1,1 +1,39 @@
-<p>audio-edit works!</p>
+<div>
+  <h2>Editar Audio</h2>
+  <div>
+    <label
+      >Nome do arquivo:
+      <input
+        [(ngModel)]="audioData.arquivoNome"
+        placeholder="arquivo.mp3"
+      /> </label
+    ><br />
+    <label
+      >Operador:
+      <input
+        [(ngModel)]="audioData.operadorNome"
+        placeholder="João Silva"
+      /> </label
+    ><br />
+
+    <label
+      >Tipo de ligação:
+      <select
+        [(ngModel)]="audioData.tipoLigacao"
+        name="tipoLigacao"
+        id="tipoLigacao"
+      >
+        <option value="0">Entrada</option>
+        <option value="1">Saída</option>
+      </select>
+    </label>
+    <label
+      >Data da Criação:
+      <input
+        type="datetime-local"
+        [(ngModel)]="audioData.dataCriacao"
+      /> </label
+    ><br />
+  </div>
+  <button (click)="updateAudio()">Update</button>
+</div>

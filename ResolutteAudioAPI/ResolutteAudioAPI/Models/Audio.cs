@@ -23,7 +23,9 @@ namespace ResolutteAudioAPI.Models
         {
             Id = id;
             ArquivoNome = arquivoNome;
+
             TipoLigacao = tipoLigacao;
+
             OperadorNome = operadorNome;
             try
             {

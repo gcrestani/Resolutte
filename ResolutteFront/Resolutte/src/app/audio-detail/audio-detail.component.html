@@ -1,2 +1,14 @@
-Colocar Swal na tela anterior perguntando se confirma os dados!
-<p>audio-detail works!</p>
+<div *ngIf="audio" class="audios">
+  <h2>Detalhes do Áudio:</h2>
+  <div><span>Nome: </span>{{ audio.arquivoNome }}</div>
+  <div><span>Operador: </span>{{ audio.operadorNome }}</div>
+  <div>
+    <span>Tipo de ligação: </span
+    ><span *ngIf="audio.tipoLigacao == 0">Entrada</span>
+    <span *ngIf="audio.tipoLigacao == 1">Saída</span>
+  </div>
+  <div><span>Data de criação: </span>{{ audio.dataCriacao | date }}</div>
+  <div>
+    <button routerLink="/audio-edit/{{ audio.id }}">Edit</button>
+  </div>
+</div>

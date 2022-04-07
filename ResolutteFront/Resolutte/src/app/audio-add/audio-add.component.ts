@@ -19,9 +19,10 @@ export class AudioAddComponent implements OnInit {
   }
 
   addAudio(): void {
+    this.audioData.TipoLigacao = Number(this.audioData.TipoLigacao); //forca ser int
     console.log(this.audioData);
     this.rest.addAudio(this.audioData).subscribe((result) => {
-      this.router.navigate(['/audio-details/' + result._id]);
+      this.router.navigate(['/audio-details/' + result.id]);
     }, (err) => {
       console.log(err);
       console.log(err.message);
