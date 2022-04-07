@@ -31,6 +31,8 @@ Abra um terminal na pasta da aplicação e execute o comando:
 
     ng-serve
 
+### Vídeo explicativo:
+[Vídeo explicativo do projeto](https://www.loom.com/share/7ae710d1a48c4d4fb1abe501271ec045)
 
 ## Construido com:
 
